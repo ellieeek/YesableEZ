@@ -1,23 +1,19 @@
 package com.example.yesable
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ChatFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ChatFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -33,20 +29,30 @@ class ChatFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
+        val view = inflater.inflate(R.layout.fragment_chat, container, false)
+
+        // RecyclerView 설정
+        val chatListRecyclerView: RecyclerView = view.findViewById(R.id.chatListRecyclerView)
+        chatListRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        // 샘플 데이터
+        val chatItems = listOf(
+            ChatItem("1", "예서블 봇", "오늘 하루는 어때?"),
+            ChatItem("2", "김순득", "하이"),
+            ChatItem("3", "신영덕", "와썹")
+        )
+
+        // 어댑터 설정 및 클릭 리스너 추가
+        chatListRecyclerView.adapter = ChatListAdapter(chatItems) { chatItem ->
+            val intent = Intent(requireContext(), ChatDetailActivity::class.java)
+            intent.putExtra("chatItemId", chatItem.id)
+            startActivity(intent)
+        }
+
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ChatFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             ChatFragment().apply {
