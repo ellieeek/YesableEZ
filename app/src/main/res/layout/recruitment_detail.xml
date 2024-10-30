@@ -100,7 +100,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="7500dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toStartOf="@+id/textView60"
@@ -154,30 +154,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
+                android:layout_marginTop="23dp"
                 android:text="접수"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="1366dp" />
+                app:layout_constraintTop_toBottomOf="@+id/view12" />
 
             <TextView
                 android:id="@+id/textView57"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="yesable@yesable.com"
-                app:layout_constraintStart_toEndOf="@+id/textView49"
-                app:layout_constraintTop_toBottomOf="@+id/textView49" />
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView56" />
 
             <TextView
                 android:id="@+id/textView59"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="35dp"
                 android:text="https://yesable.or.kr"
-                app:layout_constraintStart_toEndOf="@+id/textView58"
+                app:layout_constraintBottom_toTopOf="@+id/view9"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
 
             <View
@@ -185,149 +186,136 @@
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginTop="220dp"
-                android:layout_marginBottom="221dp"
                 android:background="#D3D3D3"
-                app:layout_constraintBottom_toBottomOf="@+id/textView67"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView45"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
             <TextView
                 android:id="@+id/textView48"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
                 android:layout_marginTop="16dp"
                 android:text="제출서류"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView46"
                 app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
             <TextView
                 android:id="@+id/textView49"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="담당자명"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView48"
                 app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
             <TextView
                 android:id="@+id/textView53"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:text="문의처"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView49"
                 app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
             <TextView
                 android:id="@+id/textView58"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="33dp"
                 android:text="홈페이지"
-                app:layout_constraintStart_toStartOf="@+id/textView53"
-                app:layout_constraintTop_toBottomOf="@+id/textView53" />
-
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="4dp"
-                android:text="기업명"
+                app:layout_constraintBottom_toTopOf="@+id/view9"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView60" />
-
-            <TextView
-                android:id="@+id/textView63"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:text="대표자명"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textView64"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/textView65"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="작업환경"
-                app:layout_constraintTop_toBottomOf="@+id/textView63"
-                tools:layout_editor_absoluteX="24dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
             <TextView
                 android:id="@+id/textView62"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginBottom="15dp"
                 android:text="(주)Yesable"
-                app:layout_constraintStart_toEndOf="@+id/textView60"
-                app:layout_constraintTop_toBottomOf="@+id/textView60" />
+                app:layout_constraintBottom_toTopOf="@+id/textView63"
+                app:layout_constraintStart_toEndOf="@+id/textView61" />
 
             <TextView
                 android:id="@+id/textView64"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="김홍식"
-                app:layout_constraintStart_toStartOf="@+id/textView62"
+                app:layout_constraintStart_toStartOf="@+id/textView66"
                 app:layout_constraintTop_toBottomOf="@+id/textView62" />
 
             <TextView
                 android:id="@+id/textView66"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
                 android:text="듀얼 모니터, 책상 간 간격 넓음"
-                app:layout_constraintStart_toStartOf="@+id/textView64"
+                app:layout_constraintStart_toEndOf="@+id/textView65"
                 app:layout_constraintTop_toBottomOf="@+id/textView64" />
-
-            <TextView
-                android:id="@+id/textView46"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="모집기간"
-                app:layout_constraintEnd_toEndOf="@+id/textView45"
-                app:layout_constraintHorizontal_bias="0.519"
-                app:layout_constraintStart_toEndOf="@+id/textView45"
-                app:layout_constraintTop_toBottomOf="@+id/textView45" />
-
-            <TextView
-                android:id="@+id/textView67"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginBottom="4dp"
-                android:text="기업주소"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textView68"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="20dp"
                 android:text="서울특별시 강남구"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView66" />
+                app:layout_constraintStart_toEndOf="@+id/textView71"
+                app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="기업명"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="작업환경"
+                app:layout_constraintStart_toStartOf="@+id/textView71"
+                app:layout_constraintTop_toBottomOf="@+id/textView63" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="대표자명"
+                app:layout_constraintStart_toStartOf="@+id/textView61"
+                app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="모집기간"
+                app:layout_constraintEnd_toEndOf="@+id/textView45"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
 
             <TextView
                 android:id="@+id/textView60"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="28dp"
                 android:text="기업정보"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -338,33 +326,29 @@
                 android:id="@+id/textView54"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="28dp"
                 android:text="2024-12-31"
-                app:layout_constraintStart_toEndOf="@+id/textView46"
-                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+                app:layout_constraintBottom_toBottomOf="@+id/textView46"
+                app:layout_constraintStart_toEndOf="@+id/textView46" />
 
             <TextView
                 android:id="@+id/textView56"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
                 android:text="채용담당자"
-                app:layout_constraintBottom_toTopOf="@+id/textView57"
-                app:layout_constraintStart_toEndOf="@+id/textView49" />
+                app:layout_constraintStart_toStartOf="@+id/textView55"
+                app:layout_constraintTop_toBottomOf="@+id/textView55" />
 
             <TextView
                 android:id="@+id/textView55"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="12dp"
                 android:text="이력서"
-                app:layout_constraintBottom_toTopOf="@+id/textView56"
-                app:layout_constraintStart_toEndOf="@+id/textView48"
-                app:layout_constraintTop_toBottomOf="@+id/textView54"
-                app:layout_constraintVertical_bias="0.363" />
+                app:layout_constraintStart_toStartOf="@+id/textView54"
+                app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
             <View
                 android:id="@+id/view5"
@@ -707,31 +691,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-            <View
-                android:id="@+id/view10"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:background="#D3D3D3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="363dp"
+                android:layout_width="0dp"
                 android:layout_height="490dp"
+                android:layout_marginStart="27dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="27dp"
                 android:layout_marginBottom="32dp"
                 android:src="@drawable/exam_recruit"
                 app:layout_constraintBottom_toBottomOf="@+id/view12"
-                app:layout_constraintTop_toBottomOf="@+id/textView69"
-                tools:layout_editor_absoluteX="28dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView69" />
+
+            <TextView
+                android:id="@+id/textView71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="20dp"
+                android:text="기업주소"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView65" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
