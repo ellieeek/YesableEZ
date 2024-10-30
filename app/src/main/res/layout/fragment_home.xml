@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/recyclerview_main_recommend" />
+                tools:listitem="@layout/item_main_recommend" />
 
             <Button
                 android:id="@+id/button_rec_more"
@@ -88,7 +88,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:text="더 많은 채용 공고 보러 가기" />
+                android:text="더 많은 채용 공고 보러 가기"
+                app:strokeColor="#E9E5E5" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -96,16 +97,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="40dp"
-                android:text="시각장애인들이 많이 지원한 공고"
+                android:text="발달장애인들이 많이 지원한 공고"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView5"
                 android:layout_width="360dp"
-                android:layout_height="80dp"
+                android:layout_height="176dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="30dp"/>
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_main_my_heart" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -119,10 +122,10 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView6"
-                android:layout_width="360dp"
-                android:layout_height="77dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="30dp"/>
+                android:layout_width="335dp"
+                android:layout_height="229dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -135,10 +138,12 @@
                 android:layout_marginStart="30dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="360dp"
-                android:layout_height="78dp"
+                android:id="@+id/recyclerView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="30dp"/>
+                android:layout_marginBottom="15dp"
+                tools:listitem="@layout/item_my_apply" />
 
         </LinearLayout>
     </ScrollView>

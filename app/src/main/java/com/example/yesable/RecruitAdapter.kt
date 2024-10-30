@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.yesable.databinding.RecyclerviewRecruitBinding
+import com.example.yesable.databinding.ItemRecruitBinding
 
 class RecruitAdapter(val recruitList: List<DataRecruit>):RecyclerView.Adapter<RecruitAdapter.MainViewHolder>(){
 
-    inner class MainViewHolder(val itemBinding: RecyclerviewRecruitBinding)
+    inner class MainViewHolder(val itemBinding: ItemRecruitBinding)
         :RecyclerView.ViewHolder(itemBinding.root){
         fun bindItem(recruitItem:DataRecruit){
             // noti 값이 공백이 아닌 경우에만 표시
@@ -29,7 +29,7 @@ class RecruitAdapter(val recruitList: List<DataRecruit>):RecyclerView.Adapter<Re
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(
-            RecyclerviewRecruitBinding.inflate(LayoutInflater.from(parent.context),
+            ItemRecruitBinding.inflate(LayoutInflater.from(parent.context),
                 parent, false))
     }
 

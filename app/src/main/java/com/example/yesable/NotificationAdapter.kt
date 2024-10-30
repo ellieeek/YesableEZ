@@ -3,11 +3,11 @@ package com.example.yesable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.yesable.databinding.RecyclerviewNotificationBinding
+import com.example.yesable.databinding.ItemNotificationBinding
 
 class NotificationAdapter(val notiList: List<DataNotification>):RecyclerView.Adapter<NotificationAdapter.MainViewHolder>(){
 
-    inner class MainViewHolder(val itemBinding: RecyclerviewNotificationBinding)
+    inner class MainViewHolder(val itemBinding: ItemNotificationBinding)
         :RecyclerView.ViewHolder(itemBinding.root){
             fun bindItem(notiItem:DataNotification){
                 itemBinding.itemNoti1.text = notiItem.noti
@@ -30,7 +30,7 @@ class NotificationAdapter(val notiList: List<DataNotification>):RecyclerView.Ada
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        return MainViewHolder(RecyclerviewNotificationBinding.inflate(LayoutInflater.from(parent.context),
+        return MainViewHolder(ItemNotificationBinding.inflate(LayoutInflater.from(parent.context),
             parent, false))
     }
 

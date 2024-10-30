@@ -89,7 +89,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/recyclerview_search_result"
+        tools:listitem="@layout/item_search_result"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     <android.widget.Button

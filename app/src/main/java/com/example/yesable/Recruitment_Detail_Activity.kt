@@ -22,13 +22,18 @@ class Recruitment_Detail_Activity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recruitment_detail)
 
+        // 전달된 데이터 가져오기
+        val recruitId = intent.getIntExtra("recruitId", -1)
+
+        // recruitId를 사용해 데이터 표시
+        if (recruitId != -1) {
+            // DB나 리스트에서 해당 ID에 맞는 데이터를 가져와 표시
+        }
+
         val backbutton = findViewById<TextView>(R.id.back_button)
         backbutton.setOnClickListener {
             finish()
         }
-
-        val logoImageView1 = findViewById<ImageView>(R.id.imageView1)
-        logoImageView1.setImageResource(R.drawable.logo)
 
 
 

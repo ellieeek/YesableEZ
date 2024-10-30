@@ -4,11 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.yesable.databinding.RecyclerviewMainRecommendBinding
+import com.example.yesable.databinding.ItemMainRecommendBinding
 
-class MainRecommendAdapter(val mainRecommendList: List<DataMainRecommend>):RecyclerView.Adapter<MainRecommendAdapter.MainViewHolder>(){
+class MainRecommendAdapter(private val mainRecommendList: List<DataMainRecommend>,
+                           private val onItemClick: (DataMainRecommend) -> Unit // 클릭 이벤트 리스너
+):RecyclerView.Adapter<MainRecommendAdapter.MainViewHolder>(){
 
-    inner class MainViewHolder(val itemBinding: RecyclerviewMainRecommendBinding)
+    inner class MainViewHolder(val itemBinding: ItemMainRecommendBinding)
         :RecyclerView.ViewHolder(itemBinding.root){
         fun bindItem(recruitItem:DataMainRecommend){
             // noti 값이 공백이 아닌 경우에만 표시
@@ -24,12 +26,16 @@ class MainRecommendAdapter(val mainRecommendList: List<DataMainRecommend>):Recyc
             itemBinding.itemNoti4.text = recruitItem.sub
             itemBinding.itemNoti5.setImageResource(recruitItem.heart)
 
+            // 클릭 리스너 설정
+            itemBinding.root.setOnClickListener {
+                onItemClick(recruitItem) // 클릭 시 외부로 전달
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(
-            RecyclerviewMainRecommendBinding.inflate(LayoutInflater.from(parent.context),
+            ItemMainRecommendBinding.inflate(LayoutInflater.from(parent.context),
                 parent, false))
     }
 

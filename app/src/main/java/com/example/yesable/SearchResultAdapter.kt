@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.yesable.databinding.RecyclerviewSearchResultBinding
+import com.example.yesable.databinding.ItemSearchResultBinding
 
 class SearchResultAdapter(val searchResultList: List<DataSearchResult>):RecyclerView.Adapter<SearchResultAdapter.MainViewHolder>(){
 
-    inner class MainViewHolder(val itemBinding: RecyclerviewSearchResultBinding)
+    inner class MainViewHolder(val itemBinding: ItemSearchResultBinding)
         :RecyclerView.ViewHolder(itemBinding.root){
         fun bindItem(searchResultItem:DataSearchResult){
             // noti 값이 공백이 아닌 경우에만 표시
@@ -29,7 +29,7 @@ class SearchResultAdapter(val searchResultList: List<DataSearchResult>):Recycler
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(
-            RecyclerviewSearchResultBinding.inflate(LayoutInflater.from(parent.context),
+            ItemSearchResultBinding.inflate(LayoutInflater.from(parent.context),
             parent, false))
     }
 
